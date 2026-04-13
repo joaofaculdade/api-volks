@@ -1,0 +1,1325 @@
+{
+  "info": {
+    "_postman_id": "bdd217b1-156d-40fa-959c-706003f685f0",
+    "name": "CMS-Status",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52348778",
+    "_collection_link": "https://go.postman.co/collection/52348778-bdd217b1-156d-40fa-959c-706003f685f0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "api-cms-creditopessoal",
+      "item": [
+        {
+          "name": "contratos",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "123mudar",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"idProposta\": 13656471\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-cms-credito-pessoal/v1/contratos",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-cms-credito-pessoal",
+                "v1",
+                "contratos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "contratos/status-pagamento",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "123mudar",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"idContrato\": 70000031,\r\n  \"produto\": \"EMPRESTIMO_CONSIGNADO\",\r\n  \"status\": \"PAGAMENTO_CONFIRMADO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-cms-credito-pessoal/v1/contratos/status-pagamento",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-cms-credito-pessoal",
+                "v1",
+                "contratos",
+                "status-pagamento"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "propostas/status",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "123mudar",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"idProposta\": 13656501,\r\n  \"status\": \"ENVIADA_A_DATAPREV\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-cms-credito-pessoal/v1/propostas/status",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-cms-credito-pessoal",
+                "v1",
+                "propostas",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "v1/contratos/cliente/{cpf}",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "key": "Authorization",
+                "value": "123mudar"
+              },
+              {
+                "key": "Referer",
+                "value": ""
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0"
+              },
+              {
+                "key": "sec-ch-ua",
+                "value": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Microsoft Edge\";v=\"144\""
+              },
+              {
+                "key": "sec-ch-ua-mobile",
+                "value": "?0"
+              }
+            ],
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-cms-credito-pessoal/v1/contratos/cliente/52282046013",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-cms-credito-pessoal",
+                "v1",
+                "contratos",
+                "cliente",
+                "52282046013"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CriarProposta(api-cms-credito-pessoal/v1/propostas)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "123mudar",
+                "type": "default"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\r\n  \"idContrato\": \"265646\",\r\n\r\n  \"idProposta\": \"265646\",\r\n\r\n  \"valor\": 10000,\r\n  \r\n  \"valorContratado\": 1000,\r\n  \"totalParcelas\": 12,\r\n\r\n  \"valorTarifa\": 0,\r\n\r\n  \"valorTaxaAno\": 26.68,\r\n\r\n  \"dataPrimeiraParcela\": \"2026-04-05\",\r\n\r\n  \"considerarIof\": \"SIM\",\r\n\r\n  \"cnpjEmpregador\": \"03495672000103\",\r\n\r\n  \"dataInclusaoProposta\": \"2026-02-05\",\r\n\r\n  \"matricula\": \"0\",\r\n\r\n  \"produto\": \"EMPRESTIMO_CONSIGNADO\",\r\n\r\n  \"dadosBancarios\": {\r\n\r\n    \"codigoBanco\": \"001\",\r\n\r\n    \"contaNumero\": 1001,\r\n\r\n    \"contaDigito\": 7,\r\n\r\n    \"contaTipo\": \"CONTA_CORRENTE\",\r\n\r\n    \"agenciaNumero\": \"100000190\"\r\n\r\n  },\r\n\r\n  \"cliente\": {\r\n\r\n    \"numeroDocumento\": \"52282046013\",\r\n\r\n    \"nome\": \"TESTE LISTAR CONTRATOS\"\r\n\r\n  }\r\n\r\n}"
+            },
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-cms-credito-pessoal/v1/propostas",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-cms-credito-pessoal",
+                "v1",
+                "propostas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "api-cms-credito-pessoal/health",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "sec-ch-ua-platform",
+                "value": "\"Windows\""
+              },
+              {
+                "key": "Authorization",
+                "value": "123mudar"
+              },
+              {
+                "key": "Referer",
+                "value": ""
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0"
+              },
+              {
+                "key": "sec-ch-ua",
+                "value": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Microsoft Edge\";v=\"144\""
+              },
+              {
+                "key": "sec-ch-ua-mobile",
+                "value": "?0"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-cms-credito-pessoal/health",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-cms-credito-pessoal",
+                "health"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "https://hisrj.dataprev.gov.br/oauth2/token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic T3FmYmtJbmZVejVfdmZGaVhrYmdQaE84UlVFYTppb1dmVml1dUNuSjFtMDREWU9Vd19WZzRPU0Vh"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "type": "text",
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://hisrj.dataprev.gov.br/oauth2/token",
+              "protocol": "https",
+              "host": [
+                "hisrj",
+                "dataprev",
+                "gov",
+                "br"
+              ],
+              "path": [
+                "oauth2",
+                "token"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "api-cms-credito-pessoal/v1/simulacoes/parcelas",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "123mudar"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"totalParcelas\":2,\r\n    \"valorSolicitado\":100000,\r\n    \"cnpj\": \"3495672000103\",\r\n    \"produto\": \"EMPRESTIMO_CONSIGNADO\",\r\n    \"dataPrimeiroPagamento\": \"2025-12-09\"\r\n}"
+            },
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-cms-credito-pessoal/v1/simulacoes/parcelas",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-cms-credito-pessoal",
+                "v1",
+                "simulacoes",
+                "parcelas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "consultar-emprestimo-trabalhador",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "123mudar",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-dataprev/v1/emprestimos/consultar-emprestimo-trabalhador?numeroContrato=70000520",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-dataprev",
+                "v1",
+                "emprestimos",
+                "consultar-emprestimo-trabalhador"
+              ],
+              "query": [
+                {
+                  "key": "numeroContrato",
+                  "value": "70000520"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "contratos/cancelar Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "123mudar",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"idContrato\": 13656464,\r\n  \"produto\": \"EMPRESTIMO_CONSIGNADO\",\r\n  \"motivo\": \"CONTRATACAO_INDEVIDA\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-cms-credito-pessoal/v1/contratos/cancelar",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-cms-credito-pessoal",
+                "v1",
+                "contratos",
+                "cancelar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "APi FUncionários",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept-Language",
+                "value": "en-US,en;q=0.9"
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive"
+              },
+              {
+                "key": "Referer",
+                "value": "http://fsbrspsa3230/api-funcionario/swagger/index.html"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+              },
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "x-correlation-id",
+                "value": "1414145"
+              }
+            ],
+            "url": {
+              "raw": "http://fsbrspsa3230/api-funcionario/api/v1/funcionarios?chapa=009999015&cpf=24258134546&dataNascimento=1982-03-21",
+              "protocol": "http",
+              "host": [
+                "fsbrspsa3230"
+              ],
+              "path": [
+                "api-funcionario",
+                "api",
+                "v1",
+                "funcionarios"
+              ],
+              "query": [
+                {
+                  "key": "chapa",
+                  "value": "009999015"
+                },
+                {
+                  "key": "cpf",
+                  "value": "24258134546"
+                },
+                {
+                  "key": "dataNascimento",
+                  "value": "1982-03-21"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "topaz-componser",
+      "item": [
+        {
+          "name": "CONTRACT - CREATE",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-composer-client-id",
+                "value": "VWFS.TSMCVWFS",
+                "type": "default"
+              },
+              {
+                "key": "x-composer-environment",
+                "value": "VWFS.topazdevelop",
+                "type": "default"
+              },
+              {
+                "key": "x-corebanking-channel",
+                "value": "API",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \n  \"data\": {   \n    \"proposalCode\": 13656471\n \n  } \n} ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://topaz-cre.dev.cms.cld.bancovw.internal/multichannel/vwfs/v1/loan/personalcredit/contract/create",
+              "protocol": "https",
+              "host": [
+                "topaz-cre",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "multichannel",
+                "vwfs",
+                "v1",
+                "loan",
+                "personalcredit",
+                "contract",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PROPOSAL - DETAIL",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-composer-client-id",
+                "value": "VWFS.TSMCVWFS",
+                "type": "default"
+              },
+              {
+                "key": "x-composer-environment",
+                "value": "VWFS.topazdevelop",
+                "type": "default"
+              },
+              {
+                "key": "x-corebanking-channel",
+                "value": "API",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"proposalCode\": 15416399\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://topaz-cre.dev.cms.cld.bancovw.internal/multichannel/vwfs/v1/loan/personalcredit/proposal/detail",
+              "protocol": "https",
+              "host": [
+                "topaz-cre",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "multichannel",
+                "vwfs",
+                "v1",
+                "loan",
+                "personalcredit",
+                "proposal",
+                "detail"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CONTRACT - DETAIL",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-composer-client-id",
+                "value": "VWFS.TSMCVWFS"
+              },
+              {
+                "key": "x-composer-environment",
+                "value": "VWFS.topazdevelop"
+              },
+              {
+                "key": "x-corebanking-channel",
+                "value": "API"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{   \"data\": {     \"contractCode\": 70000546    } }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://topaz-cre.dev.cms.cld.bancovw.internal/multichannel/vwfs/v1/loan/personalcredit/contract/detail",
+              "protocol": "https",
+              "host": [
+                "topaz-cre",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "multichannel",
+                "vwfs",
+                "v1",
+                "loan",
+                "personalcredit",
+                "contract",
+                "detail"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "api-dataprev",
+      "item": [
+        {
+          "name": "excluir-consignado-trabalhador",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "123mudar",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"codigoInscricaoEmpregador\": 1,\r\n  \"codigoSolicitante\": 393,\r\n  \"cpfTrabalhador\": 93642877036,\r\n  \"matricula\": \"93642877036\",\r\n  \"motivoExclusao\": 9,\r\n  \"numeroContrato\": \"70000008\",\r\n  \"numeroInscricaoEmpregador\": 3495672000103\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-dataprev/v1/emprestimos/excluir-consignado-trabalhador",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-dataprev",
+                "v1",
+                "emprestimos",
+                "excluir-consignado-trabalhador"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "averbar-consignado-trabalhador",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "123mudar",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"codigoInscricaoEmpregador\": 1,\r\n  \"codigoSolicitante\": 393,\r\n  \"cpfTrabalhador\": 52282046013,\r\n  \"dataFimContrato\": \"2027-04-26\",\r\n  \"dataInicioContrato\": \"2025-02-12\",\r\n  \"dataPrimeiroDesconto\": \"2026-04-26\",\r\n  \"matricula\": \"03495672000103\",\r\n  \"nomeTrabalhador\": \"Fulano 99219606011\",\r\n  \"numeroContrato\": \"265646\",\r\n  \"numeroInscricaoEmpregador\": 3495672000103,\r\n  \"numeroParcelas\": 18,\r\n  \"valorCETAnual\": 16.11,\r\n  \"valorCETMensal\": 1.25,\r\n  \"valorEmprestimo\": 11594.08,\r\n  \"valorIOF\": 297.95,\r\n  \"valorLiberado\": 10000,\r\n  \"valorParcela\": 644.11,\r\n  \"valorTaxaAnual\": 12.55,\r\n  \"valorTaxaMensal\": 0.99,\r\n  \"competenciaInicioDesconto\": \"202604\",\r\n  \"cnpjOperador\": 3495672000103\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-dataprev/v1/emprestimos/averbar-consignado-trabalhador",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-dataprev",
+                "v1",
+                "emprestimos",
+                "averbar-consignado-trabalhador"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "excluir-antecipar-parcela Copy",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "123mudar",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"idCompetencia\": \"202607\",\r\n  \"numeroContrato\": \"70000222\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-dataprev/v1/emprestimos/excluir-antecipar-parcela",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-dataprev",
+                "v1",
+                "emprestimos",
+                "excluir-antecipar-parcela"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "consultar-repasse-pagamentos Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "123mudar",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-dataprev/v1/emprestimos/consultar-repasse-pagamentos?dataHoraInicio=01032026000000&dataHoraFim=11032026235959&nroPagina=1",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-dataprev",
+                "v1",
+                "emprestimos",
+                "consultar-repasse-pagamentos"
+              ],
+              "query": [
+                {
+                  "key": "dataHoraInicio",
+                  "value": "01032026000000",
+                  "type": "text"
+                },
+                {
+                  "key": "dataHoraFim",
+                  "value": "11032026235959",
+                  "type": "text"
+                },
+                {
+                  "key": "nroPagina",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "consultar-escrituracoes-remuneracoes Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "123mudar",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://app.dev.cms.cld.bancovw.internal/api-dataprev/v1/emprestimos/consultar-escrituracoes-remuneracoes?dataHoraInicio=01032026000000&dataHoraFim=11032026235959&nroPagina=1",
+              "protocol": "https",
+              "host": [
+                "app",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "api-dataprev",
+                "v1",
+                "emprestimos",
+                "consultar-escrituracoes-remuneracoes"
+              ],
+              "query": [
+                {
+                  "key": "dataHoraInicio",
+                  "value": "01032026000000"
+                },
+                {
+                  "key": "dataHoraFim",
+                  "value": "11032026235959"
+                },
+                {
+                  "key": "nroPagina",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "CriacaoTopaz",
+      "item": [
+        {
+          "name": "atualizar-status",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-composer-client-id",
+                "value": "VWFS.TSMCVWFS"
+              },
+              {
+                "key": "x-composer-environment",
+                "value": "VWFS.topazdevelop"
+              },
+              {
+                "key": "x-corebanking-channel",
+                "value": "API"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\": {\r\n        \"proposalCode\": 13656498,\r\n         //    ENVIADA_A_DATAPREV \r\n         //    AVERBACAO_REPROVADA \r\n         //    CANCELADA \r\n         //    CONTRATO_ASSINADO \r\n         //    AVERBACAO_EFETIVADA_LIBERADA ??? \r\n         //    AVERBACAO_APROVADA     \r\n         \"status\": \"CONTRATO_ASSINADO\"   \r\n         } }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://topaz-cre.dev.cms.cld.bancovw.internal/multichannel/vwfs/v1/loan/personalcredit/proposal/update/status",
+              "protocol": "https",
+              "host": [
+                "topaz-cre",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "multichannel",
+                "vwfs",
+                "v1",
+                "loan",
+                "personalcredit",
+                "proposal",
+                "update",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "criar-contrato-interno",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-composer-client-id",
+                "value": "VWFS.TSMCVWFS"
+              },
+              {
+                "key": "x-composer-environment",
+                "value": "VWFS.topazdevelop"
+              },
+              {
+                "key": "x-corebanking-channel",
+                "value": "API"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"data\": {\r\n        \"proposalCode\": 13656498\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://topaz-cre.dev.cms.cld.bancovw.internal/multichannel/vwfs/v1/loan/personalcredit/contract/create",
+              "protocol": "https",
+              "host": [
+                "topaz-cre",
+                "dev",
+                "cms",
+                "cld",
+                "bancovw",
+                "internal"
+              ],
+              "path": [
+                "multichannel",
+                "vwfs",
+                "v1",
+                "loan",
+                "personalcredit",
+                "contract",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "criacao-simulacao-dataprev",
+      "item": [
+        {
+          "name": "envio-soliticao-ctps-empresa-nao-aut",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ4NXQiOiJxLUZpUURHNEFhWjh2NjN3TVJibEE4bHBfQmciLCJraWQiOiJPVGt6WTJVd1pqTmpZVGxsWVRrMFlqazBZelEyTmpJd056TTJaR1F6TTJFMU9ESmpZV1F5WVdZd09EZzJNbUV3WVRGallqSXdPR1V4WTJRME1XUTJaQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyNjQ5ODQzNzgwNCIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiT3FmYmtJbmZVejVfdmZGaVhrYmdQaE84UlVFYSIsIm5iZiI6MTc3NDkwMjQ3NiwiYXpwIjoiT3FmYmtJbmZVejVfdmZGaVhrYmdQaE84UlVFYSIsInNjb3BlIjoiZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9oaXNyai5kYXRhcHJldi5nb3YuYnJcL29hdXRoMlwvdG9rZW4iLCJleHAiOjE3NzQ5MDYwNzYsImlhdCI6MTc3NDkwMjQ3NiwianRpIjoiM2I3ZmIyNzEtZmNhOC00NWM2LWJlYzgtYTIzOThjZWVhODRlIn0.GpyQn278hCJmngDIwDkQHVDiGxGwl3_xI-muph0TDW64EXu4wbTiTGhvuC8MD_jhL3Aj-0iwZxHoxY9LT-xJ2xAg9PAFZDHGcJsKNLCwc_2AYHl6zXz2uWR_Hip3DG0RKscTYS9R70aL6XRTyTR2mEWRzWP44uQhvnx0ltypNJFVOLoC0GwrwT0YKJFkUeRsBrO_TL1kTSoCJBZZQloUrJCyheXV2hsPj-cnn89A3wFRW8MrwHK35rigeDosHVmdSrfZMDTXr-dL-45m9X8lSBBQcmNc62q2rvhhuxWvH54fyn_sH8efEjgYNyrm9Bz5wHeM2dEmSXLTqaRkbHH2QQ"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigoInscricaoEmpregador\": \"1\",\n  \"codigoSolicitante\": \"393\",\n  \"cpf\": \"92342896093\",\n  \"matricula\": \"4075501\",\n  \"numeroInscricaoEmpregador\": \"99995181000109\",\n  \"numeroParcelas\": \"48\",\n  \"valorLiberado\": \"26000\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://hapibancos.dataprev.gov.br/e-consignado-trabalhador/v1.0.0/homologacao/solicitacao-extra-trabalhador",
+              "protocol": "https",
+              "host": [
+                "hapibancos",
+                "dataprev",
+                "gov",
+                "br"
+              ],
+              "path": [
+                "e-consignado-trabalhador",
+                "v1.0.0",
+                "homologacao",
+                "solicitacao-extra-trabalhador"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "envio-soliticao-ctps-empresa-nao-aut Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ4NXQiOiJxLUZpUURHNEFhWjh2NjN3TVJibEE4bHBfQmciLCJraWQiOiJPVGt6WTJVd1pqTmpZVGxsWVRrMFlqazBZelEyTmpJd056TTJaR1F6TTJFMU9ESmpZV1F5WVdZd09EZzJNbUV3WVRGallqSXdPR1V4WTJRME1XUTJaQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyNjQ5ODQzNzgwNCIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiT3FmYmtJbmZVejVfdmZGaVhrYmdQaE84UlVFYSIsIm5iZiI6MTc3NDAxOTY3MywiYXpwIjoiT3FmYmtJbmZVejVfdmZGaVhrYmdQaE84UlVFYSIsInNjb3BlIjoiZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9oaXNyai5kYXRhcHJldi5nb3YuYnJcL29hdXRoMlwvdG9rZW4iLCJleHAiOjE3NzQwMjMyNzMsImlhdCI6MTc3NDAxOTY3MywianRpIjoiZDMyODI0Y2ItMTM5Yi00MDVmLWE0MmItMDZjYTkxZTNlZTBlIn0.Uvyc1_CkFh07qxLX6PCfh9a4osg7t9QuNJCQgYpJ0wK2sN6DCPnrC-7187an68rEByF6vjEbAAeDQu20CrZSbZGH_C3ANc8oTDtnVkxA3Zm9htuJEGlROcBhZfJGT_cRuouZdtNXP-b_KnsCVBCn0Oo2O2jSMQtVCxiQk_8OG9TLw3bKtWDfZfu4AW0VnsutvS18TPygCHBdf_72gNeqPLDu5EbdZG9gRf1xchj3_dAmcnk_kkH0M6zTN82VQJ6c_H39uu16SEnRVZKSXIGf4D7FuWAq7zRoA5FYV-syTA08Jfva35K6j3aBS-la2Aedx0BxQcJKwaFRimu-vKoqlw"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigoInscricaoEmpregador\": \"1\",\n  \"codigoSolicitante\": \"393\",\n  \"cpf\": \"92342896093\",\n  \"matricula\": \"4075501\",\n  \"numeroInscricaoEmpregador\": \"99995181000109\",\n  \"numeroParcelas\": \"48\",\n  \"valorLiberado\": \"26000\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://hapibancos.dataprev.gov.br/e-consignado-trabalhador/v1.0.0/homologacao/solicitacao-extra-trabalhador",
+              "protocol": "https",
+              "host": [
+                "hapibancos",
+                "dataprev",
+                "gov",
+                "br"
+              ],
+              "path": [
+                "e-consignado-trabalhador",
+                "v1.0.0",
+                "homologacao",
+                "solicitacao-extra-trabalhador"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "consultas-solicitacoes",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ4NXQiOiJxLUZpUURHNEFhWjh2NjN3TVJibEE4bHBfQmciLCJraWQiOiJPVGt6WTJVd1pqTmpZVGxsWVRrMFlqazBZelEyTmpJd056TTJaR1F6TTJFMU9ESmpZV1F5WVdZd09EZzJNbUV3WVRGallqSXdPR1V4WTJRME1XUTJaQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyNjQ5ODQzNzgwNCIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiT3FmYmtJbmZVejVfdmZGaVhrYmdQaE84UlVFYSIsIm5iZiI6MTc3Mzg2MDkwOCwiYXpwIjoiT3FmYmtJbmZVejVfdmZGaVhrYmdQaE84UlVFYSIsInNjb3BlIjoiZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9oaXNyai5kYXRhcHJldi5nb3YuYnJcL29hdXRoMlwvdG9rZW4iLCJleHAiOjE3NzM4NjQ1MDgsImlhdCI6MTc3Mzg2MDkwOCwianRpIjoiOTA4MDU5OTItMDIyNC00OWVmLThjYjItODIyNWIxY2RmMjk5In0.W6ZlxSX6Vl8fkn-WRLugBoODOYIpeybeA6ayLA67_4gQZMAyZaj3FgUIoikLhWDqDr_1aeRvoSy4IgRtsRVOnGgIkchdVM_WXPLFgRhM752_ylDM9fCUMoy3V7D74aq9iz_MPEz0pyrEhOHK4KH7ToYie3kkWHDnpW4zmL5nGn9rT4L9mm8uC92Qx-v2ugsE8R-XPI4yVMX5ckmsMOkZqUtDvkovvxo0O5a5El_gzto2Bn9UWA8CcRfmwYyfTN01zVRzLcDZa1oRG4ClkhtLO1sC7dpgWVYWdHJKelxnHjkDQOVPR5SpB_xu-RZm3h321TCnhKJSfv7f1FnK38qcKA"
+              }
+            ],
+            "url": {
+              "raw": "https://hapibancos.dataprev.gov.br/e-consignado-trabalhador/v1.0.0/propostas-ctps/solicitacoes-trabalhador-paginado?codigoSolicitante=393&dataHoraInicio=18032026155700&dataHoraFim=18032026160800&nroPagina=1",
+              "protocol": "https",
+              "host": [
+                "hapibancos",
+                "dataprev",
+                "gov",
+                "br"
+              ],
+              "path": [
+                "e-consignado-trabalhador",
+                "v1.0.0",
+                "propostas-ctps",
+                "solicitacoes-trabalhador-paginado"
+              ],
+              "query": [
+                {
+                  "key": "codigoSolicitante",
+                  "value": "393"
+                },
+                {
+                  "key": "dataHoraInicio",
+                  "value": "18032026155700"
+                },
+                {
+                  "key": "dataHoraFim",
+                  "value": "18032026160800"
+                },
+                {
+                  "key": "nroPagina",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "dataprev/homologacao/massa-extra-trabalhador",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ4NXQiOiJxLUZpUURHNEFhWjh2NjN3TVJibEE4bHBfQmciLCJraWQiOiJPVGt6WTJVd1pqTmpZVGxsWVRrMFlqazBZelEyTmpJd056TTJaR1F6TTJFMU9ESmpZV1F5WVdZd09EZzJNbUV3WVRGallqSXdPR1V4WTJRME1XUTJaQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyNjQ5ODQzNzgwNCIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiT3FmYmtJbmZVejVfdmZGaVhrYmdQaE84UlVFYSIsIm5iZiI6MTc3NDYzOTgwOSwiYXpwIjoiT3FmYmtJbmZVejVfdmZGaVhrYmdQaE84UlVFYSIsInNjb3BlIjoiZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9oaXNyai5kYXRhcHJldi5nb3YuYnJcL29hdXRoMlwvdG9rZW4iLCJleHAiOjE3NzQ2NDM0MDksImlhdCI6MTc3NDYzOTgwOSwianRpIjoiYWE5ZDZhYjMtZTQ4NC00OGZkLTg3NDAtYzJiYWRiZWJhNzg1In0.Da3KwbaCt3xkOZ6IguyhK03QqSbGwLWPu9wCkJfFwzhQ0PLyprwHt7cyYjxaEeOWlGk5ixFNpVvkaNED_0tpWazDzGNSnDy9U1NqQsKXokitTPM2IIlC1GBSu_FkCbagbOW0Et1GgMs1J-mbNhngq89Ur96QXGqGfwG2PWgH6XrjbivATTqhajElG63fyN1Fv9I8xRjrubX7_JuhPWFKFmRA8kaJcQiuJlcWeVdJQnej0OAYBYQ5swNv70UOjpSAd2OmURTG5xAsfrTH5ZLhyccwIG3dtKQiPDzkdbtTmJGocuMpYoAogL5Y6o11g6aCAEDZdkvWAF_-mjqq4heagA"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigoCategoriaTrabalhador\": \"101\",\n  \"codigoInscricaoEmpregador\": \"1\",\n  \"codigoSolicitante\": \"393\",\n  \"cpfTrabalhador\": \"52282046013\",\n  \"dataAdmissao\": \"14092017\",\n  \"dataNascimento\": \"31031985\",\n  \"elegivel\": \"false\",\n  \"matricula\": \"4051013\",\n  \"nome\": \"Joselino Silva\",\n  \"numeroInscricaoEmpregador\": \"3495672000103\",\n  \"codigoInscricaoEstabelecimento\": \"\",\n  \"numeroInscricaoEstabelecimento\": \"\",\n  \"codigoSexo\": \"1\",\n  \"codigoInelegivel\": \"\",\n  \"valorTotalVencimentos\": \"10000\",\n  \"valorBaseMargem\": \"30000\",\n  \"valorMargemDisponivel\": \"30000\",\n  \"codigoMotivoDesligamento\": \"\",\n  \"pessoaExpostaPoliticamente\": \"0\",\n  \"nomeEmpregador\": \"VOLKSWAGEN PARTICIPACOES LTDA\",\n  \"codigoClassificacaoTributaria\": \"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://hapibancos.dataprev.gov.br/e-consignado-trabalhador/v1.0.0/homologacao/massa-extra-trabalhador",
+              "protocol": "https",
+              "host": [
+                "hapibancos",
+                "dataprev",
+                "gov",
+                "br"
+              ],
+              "path": [
+                "e-consignado-trabalhador",
+                "v1.0.0",
+                "homologacao",
+                "massa-extra-trabalhador"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "contratos/dados-bancarios Copy",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "123mudar",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"idContrato\": \"70000141\",\r\n\t\"produto\": \"EMPRESTIMO_CONSIGNADO\",\r\n\t\"dadosBancarios\": {\r\n\t\t\"codigoBanco\": \"341\",\r\n\t\t\"contaNumero\": 1091061,\r\n\t\t\"contaDigito\": 0,\r\n\t\t\"contaTipo\": \"CONTA_CORRENTE\",\r\n\t\t\"agenciaNumero\": \"006926\"\r\n\t}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://app.dev.cms.cld.bancovw.internal/api-cms-credito-pessoal/v1/contratos/dados-bancarios",
+          "protocol": "https",
+          "host": [
+            "app",
+            "dev",
+            "cms",
+            "cld",
+            "bancovw",
+            "internal"
+          ],
+          "path": [
+            "api-cms-credito-pessoal",
+            "v1",
+            "contratos",
+            "dados-bancarios"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
